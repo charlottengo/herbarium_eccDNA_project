@@ -14,7 +14,7 @@ Extract depth profiles for EPSPS-bearing contigs to distinguish eccDNA vs. chrom
 
 All steps are implemented using SLURM + micromamba for strict reproducibility.
 
-📁 Repository Structure
+Repository Structure
 herbarium_eccDNA_project/
 │
 ├── bin/                  # All SLURM job scripts used in the workflow
@@ -23,7 +23,7 @@ herbarium_eccDNA_project/
 ├── results/              # Final outputs (depth profiles, EPSPS hits, eccDNA panels)
 └── work/                 # Intermediate assembly, mapping, QC, eccDNA detection
 
-🔧 Software & Environment
+Software & Environment
 
 All analyses use isolated micromamba environments to ensure reproducibility.
 
@@ -42,7 +42,7 @@ For eccDNA detection:
 micromamba create -n eccdna -y \
     python=3.10 minimap2 samtools bedtools seqkit pysam
 
-📚 Workflow Overview
+Workflow Overview
 
 Each numbered module in docs/ corresponds to one stage of the pipeline.
 
@@ -148,7 +148,7 @@ helper: bin/circle_qc.py
 
 This procedure recovered 222 high-confidence eccDNA contigs, consistent with large replicon-like circles and additional eccDNA families in the genome.
 
-🎯 Scientific Goals of the Pilot
+Scientific Goals of the Pilot
 
 This PacBio re-analysis serves as a controlled test case to:
 
@@ -166,7 +166,7 @@ determining the timing and origin of EPSPS amplification,
 
 distinguishing eccDNA vs. chromosomal duplication in historical herbarium specimens.
 
-📎 Reproducibility
+Reproducibility
 
 Every step is:
 
@@ -180,7 +180,7 @@ SLURM-compatible for HPC execution
 
 This makes the workflow fully reproducible for committee review and future expansion (e.g., historical Illumina data in Chapter 1).
 
-🔗 Future Extensions
+Future Extensions
 
 Planned modules:
 
